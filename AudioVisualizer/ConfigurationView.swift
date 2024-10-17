@@ -1,3 +1,4 @@
+
 import SwiftUI
 
 struct ConfigurationView: View {
@@ -24,19 +25,11 @@ struct ConfigurationView: View {
                     }
                 }
                 
-                ColorPicker("Background Color", selection: $config.backgroundColor)
-                
                 Slider(value: $config.objectSizeMultiplier, in: 0.1...5) {
                     Text("Object Size Multiplier: \(config.objectSizeMultiplier, specifier: "%.2f")")
                 }
                 
                 Stepper("Number of Objects: \(config.numberOfObjects)", value: $config.numberOfObjects, in: 10...1000, step: 10)
-                
-                Slider(value: $config.fogIntensity, in: 0...1) {
-                    Text("Fog Intensity: \(config.fogIntensity, specifier: "%.2f")")
-                }
-                
-                ColorPicker("Fog Color", selection: $config.fogColor)
                 
                 Slider(value: $config.floorReflectivity, in: 0...1) {
                     Text("Floor Reflectivity: \(config.floorReflectivity, specifier: "%.2f")")
@@ -63,12 +56,12 @@ struct ConfigurationView: View {
                 }
             }
             
-            Button("Generate Visualization") {
-                coordinator.visualizationConfig = config
-                coordinator.generateVisualization()
+            Section {
+                Button("Generate Visualization") {
+                    coordinator.visualizationConfig = config
+                    coordinator.generateVisualization()
+                }
             }
-            .padding()
         }
-        .padding()
     }
 }

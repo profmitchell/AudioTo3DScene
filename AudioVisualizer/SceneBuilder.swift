@@ -6,7 +6,12 @@ class SceneBuilder {
         let scene = SCNScene()
         addFloor(to: scene, reflectivity: config.floorReflectivity)
         addCamera(to: scene, position: config.cameraPosition, angle: config.cameraAngle)
-        addFog(to: scene, intensity: config.fogIntensity, color: config.fogColor)
+        addLighting(to: scene, mood: config.mood)
+        
+        scene.background.contents = config.mood.backgroundColor
+        scene.fogStartDistance = config.mood.fogStartDistance
+        scene.fogEndDistance = config.mood.fogEndDistance
+        scene.fogColor = config.mood.fogColor
         
         switch config.visualizationType {
         case .boxes:
@@ -24,6 +29,7 @@ class SceneBuilder {
         let floorGeometry = SCNFloor()
         floorGeometry.reflectivity = CGFloat(reflectivity)
         let floorNode = SCNNode(geometry: floorGeometry)
+        floorNode.name = "floor"
         scene.rootNode.addChildNode(floorNode)
     }
     
@@ -32,13 +38,25 @@ class SceneBuilder {
         cameraNode.camera = SCNCamera()
         cameraNode.position = position
         cameraNode.eulerAngles = angle
+        cameraNode.name = "camera"
         scene.rootNode.addChildNode(cameraNode)
     }
     
-    private func addFog(to scene: SCNScene, intensity: Float, color: Color) {
-        scene.fogStartDistance = CGFloat(10 * intensity)
-        scene.fogEndDistance = CGFloat(50 * intensity)
-        scene.fogColor = NSColor(color)
+    private func addLighting(to scene: SCNScene, mood: Mood) {
+        let ambientLight = SCNNode()
+        ambientLight.light = SCNLight()
+        ambientLight.light?.type = .ambient
+        ambientLight.light?.color = mood.ambientLightColor
+        ambientLight.name = "ambientLight"
+        scene.rootNode.addChildNode(ambientLight)
+        
+        let directionalLight = SCNNode()
+        directionalLight.light = SCNLight()
+        directionalLight.light?.type = .directional
+        directionalLight.light?.color = mood.directionalLightColor
+        directionalLight.eulerAngles = SCNVector3(x: -0.5, y: -0.5, z: 0)
+        directionalLight.name = "directionalLight"
+        scene.rootNode.addChildNode(directionalLight)
     }
     
     private func addBoxes(from samples: [Float], to scene: SCNScene, config: VisualizationConfig) {
