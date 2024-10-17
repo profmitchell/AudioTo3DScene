@@ -7,94 +7,135 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF3CD5E02CB0F5120019D456 /* AudioVisualizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CD5DF2CB0F5120019D456 /* AudioVisualizerApp.swift */; };
-		AF3CD5E22CB0F5120019D456 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CD5E12CB0F5120019D456 /* ContentView.swift */; };
-		AF3CD5E42CB0F5130019D456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3CD5E32CB0F5130019D456 /* Assets.xcassets */; };
-		AF3CD5E72CB0F5130019D456 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3CD5E62CB0F5130019D456 /* Preview Assets.xcassets */; };
-		AFB203572CB0F5E400074B7D /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB203562CB0F5E400074B7D /* SceneKit.framework */; };
-		AFB203592CB0F5F200074B7D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB203582CB0F5F200074B7D /* AVFoundation.framework */; };
+		A1A1A1A1A1A1A1A1A1A1A1A1 /* AudioVisualizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A2A2A2A2A2A2A2A2A2A2A2 /* AudioVisualizerApp.swift */; };
+		A3A3A3A3A3A3A3A3A3A3A3A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A4A4A4A4A4A4A4A4A4A4A4 /* ContentView.swift */; };
+		A5A5A5A5A5A5A5A5A5A5A5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6A6A6A6A6A6A6A6A6A6A6A6 /* Assets.xcassets */; };
+		A9A9A9A9A9A9A9A9A9A9A9A9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAAAAAAAAAAAAAAAAAAA /* AppCoordinator.swift */; };
+		ABABABABABABABABABABABAB /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACACACACACACACACACACAC /* AppCoordinatorView.swift */; };
+		ADADADADADADADADADADADAD /* FileSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAEAEAEAEAEAEAEAEAEAEAE /* FileSelectionView.swift */; };
+		AF31AC822CC0C0D0006875C5 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = AF31AC7E2CC0C0D0006875C5 /* Contents.json */; };
+		AF31AC832CC0C0D0006875C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF31AC7F2CC0C0D0006875C5 /* Preview Assets.xcassets */; };
+		AFAFAFAFAFAFAFAFAFAFAFAF /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0B0B0B0B0B0B0B0B0B0B0 /* ConfigurationView.swift */; };
+		B1B1B1B1B1B1B1B1B1B1B1B1 /* AudioAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B2B2B2B2B2B2B2B2B2B2B2 /* AudioAnalyzer.swift */; };
+		B3B3B3B3B3B3B3B3B3B3B3B3 /* SceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4B4B4B4B4B4B4B4B4B4B4 /* SceneBuilder.swift */; };
+		B5B5B5B5B5B5B5B5B5B5B5B5 /* VisualizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B6B6B6B6B6B6B6B6B6B6B6 /* VisualizationView.swift */; };
+		B7B7B7B7B7B7B7B7B7B7B7B7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8B8B8B8B8B8B8B8B8B8B8 /* SwiftUI.framework */; };
+		B9B9B9B9B9B9B9B9B9B9B9B9 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABABABABABABABABABABABA /* SceneKit.framework */; };
+		BBBBBBBBBBBBBBBBBBBBBBBB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBCBCBCBCBCBCBCBCBCBCBC /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF3CD5DC2CB0F5120019D456 /* AudioVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF3CD5DF2CB0F5120019D456 /* AudioVisualizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizerApp.swift; sourceTree = "<group>"; };
-		AF3CD5E12CB0F5120019D456 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AF3CD5E32CB0F5130019D456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF3CD5E62CB0F5130019D456 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AF3CD5E82CB0F5130019D456 /* AudioVisualizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioVisualizer.entitlements; sourceTree = "<group>"; };
-		AFB203562CB0F5E400074B7D /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
-		AFB203582CB0F5F200074B7D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A0A0A0A0A0A0A0A0A0A0A0A0 /* AudioVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2A2A2A2A2A2A2A2A2A2A2A2 /* AudioVisualizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizerApp.swift; sourceTree = "<group>"; };
+		A4A4A4A4A4A4A4A4A4A4A4A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A6A6A6A6A6A6A6A6A6A6A6A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8A8A8A8A8A8A8A8A8A8A8A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAAAAAAAAAAAAAAAAAAAAA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		ACACACACACACACACACACACAC /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
+		AEAEAEAEAEAEAEAEAEAEAEAE /* FileSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionView.swift; sourceTree = "<group>"; };
+		AF31AC7E2CC0C0D0006875C5 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = "AudioVisualizer/Preview Content/Preview Assets.xcassets/Contents.json"; sourceTree = "<group>"; };
+		AF31AC7F2CC0C0D0006875C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "AudioVisualizer/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF31AC812CC0C0D0006875C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B0B0B0B0B0B0B0B0B0B0B0B0 /* ConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
+		B2B2B2B2B2B2B2B2B2B2B2B2 /* AudioAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnalyzer.swift; sourceTree = "<group>"; };
+		B4B4B4B4B4B4B4B4B4B4B4B4 /* SceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBuilder.swift; sourceTree = "<group>"; };
+		B6B6B6B6B6B6B6B6B6B6B6B6 /* VisualizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationView.swift; sourceTree = "<group>"; };
+		B8B8B8B8B8B8B8B8B8B8B8B8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BABABABABABABABABABABABA /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		BCBCBCBCBCBCBCBCBCBCBCBC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BDBDBDBDBDBDBDBDBDBDBDBD /* AudioVisualizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioVisualizer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AF3CD5D92CB0F5120019D456 /* Frameworks */ = {
+		C1C1C1C1C1C1C1C1C1C1C1C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB203592CB0F5F200074B7D /* AVFoundation.framework in Frameworks */,
-				AFB203572CB0F5E400074B7D /* SceneKit.framework in Frameworks */,
+				B7B7B7B7B7B7B7B7B7B7B7B7 /* SwiftUI.framework in Frameworks */,
+				B9B9B9B9B9B9B9B9B9B9B9B9 /* SceneKit.framework in Frameworks */,
+				BBBBBBBBBBBBBBBBBBBBBBBB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF3CD5D32CB0F5120019D456 = {
+		AF31AC802CC0C0D0006875C5 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AF3CD5DE2CB0F5120019D456 /* AudioVisualizer */,
-				AF3CD5DD2CB0F5120019D456 /* Products */,
-				AFB203552CB0F5E400074B7D /* Frameworks */,
+				AF31AC812CC0C0D0006875C5 /* Preview Assets.xcassets */,
+			);
+			name = "Preview Content";
+			path = "AudioVisualizer/Preview Content";
+			sourceTree = "<group>";
+		};
+		C2C2C2C2C2C2C2C2C2C2C2C2 = {
+			isa = PBXGroup;
+			children = (
+				AF31AC7E2CC0C0D0006875C5 /* Contents.json */,
+				AF31AC7F2CC0C0D0006875C5 /* Preview Assets.xcassets */,
+				AF31AC802CC0C0D0006875C5 /* Preview Content */,
+				C3C3C3C3C3C3C3C3C3C3C3C3 /* AudioVisualizer */,
+				C4C4C4C4C4C4C4C4C4C4C4C4 /* Frameworks */,
+				C5C5C5C5C5C5C5C5C5C5C5C5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AF3CD5DD2CB0F5120019D456 /* Products */ = {
+		C3C3C3C3C3C3C3C3C3C3C3C3 /* AudioVisualizer */ = {
 			isa = PBXGroup;
 			children = (
-				AF3CD5DC2CB0F5120019D456 /* AudioVisualizer.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AF3CD5DE2CB0F5120019D456 /* AudioVisualizer */ = {
-			isa = PBXGroup;
-			children = (
-				AF3CD5DF2CB0F5120019D456 /* AudioVisualizerApp.swift */,
-				AF3CD5E12CB0F5120019D456 /* ContentView.swift */,
-				AF3CD5E32CB0F5130019D456 /* Assets.xcassets */,
-				AF3CD5E82CB0F5130019D456 /* AudioVisualizer.entitlements */,
-				AF3CD5E52CB0F5130019D456 /* Preview Content */,
+				A2A2A2A2A2A2A2A2A2A2A2A2 /* AudioVisualizerApp.swift */,
+				A4A4A4A4A4A4A4A4A4A4A4A4 /* ContentView.swift */,
+				AAAAAAAAAAAAAAAAAAAAAA /* AppCoordinator.swift */,
+				ACACACACACACACACACACACAC /* AppCoordinatorView.swift */,
+				AEAEAEAEAEAEAEAEAEAEAEAE /* FileSelectionView.swift */,
+				B0B0B0B0B0B0B0B0B0B0B0B0 /* ConfigurationView.swift */,
+				B2B2B2B2B2B2B2B2B2B2B2B2 /* AudioAnalyzer.swift */,
+				B4B4B4B4B4B4B4B4B4B4B4B4 /* SceneBuilder.swift */,
+				B6B6B6B6B6B6B6B6B6B6B6B6 /* VisualizationView.swift */,
+				A6A6A6A6A6A6A6A6A6A6A6A6 /* Assets.xcassets */,
+				BDBDBDBDBDBDBDBDBDBDBDBD /* AudioVisualizer.entitlements */,
+				C6C6C6C6C6C6C6C6C6C6C6C6 /* Preview Content */,
 			);
 			path = AudioVisualizer;
 			sourceTree = "<group>";
 		};
-		AF3CD5E52CB0F5130019D456 /* Preview Content */ = {
+		C4C4C4C4C4C4C4C4C4C4C4C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AF3CD5E62CB0F5130019D456 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		AFB203552CB0F5E400074B7D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AFB203582CB0F5F200074B7D /* AVFoundation.framework */,
-				AFB203562CB0F5E400074B7D /* SceneKit.framework */,
+				B8B8B8B8B8B8B8B8B8B8B8B8 /* SwiftUI.framework */,
+				BABABABABABABABABABABABA /* SceneKit.framework */,
+				BCBCBCBCBCBCBCBCBCBCBCBC /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5C5C5C5C5C5C5C5C5C5C5C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0A0A0A0A0A0A0A0A0A0A0A0 /* AudioVisualizer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6C6C6C6C6C6C6C6C6C6C6C6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A8A8A8A8A8A8A8A8A8A8A8A8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF3CD5DB2CB0F5120019D456 /* AudioVisualizer */ = {
+		C7C7C7C7C7C7C7C7C7C7C7C7 /* AudioVisualizer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF3CD5EB2CB0F5130019D456 /* Build configuration list for PBXNativeTarget "AudioVisualizer" */;
+			buildConfigurationList = C8C8C8C8C8C8C8C8C8C8C8C8 /* Build configuration list for PBXNativeTarget "AudioVisualizer" */;
 			buildPhases = (
-				AF3CD5D82CB0F5120019D456 /* Sources */,
-				AF3CD5D92CB0F5120019D456 /* Frameworks */,
-				AF3CD5DA2CB0F5120019D456 /* Resources */,
+				C9C9C9C9C9C9C9C9C9C9C9C9 /* Sources */,
+				C1C1C1C1C1C1C1C1C1C1C1C1 /* Frameworks */,
+				CACACACACACACACACACACACA /* Resources */,
 			);
 			buildRules = (
 			);
@@ -102,25 +143,25 @@
 			);
 			name = AudioVisualizer;
 			productName = AudioVisualizer;
-			productReference = AF3CD5DC2CB0F5120019D456 /* AudioVisualizer.app */;
+			productReference = A0A0A0A0A0A0A0A0A0A0A0A0 /* AudioVisualizer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AF3CD5D42CB0F5120019D456 /* Project object */ = {
+		CBCBCBCBCBCBCBCBCBCBCBCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					AF3CD5DB2CB0F5120019D456 = {
-						CreatedOnToolsVersion = 15.2;
+					C7C7C7C7C7C7C7C7C7C7C7C7 = {
+						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
-			buildConfigurationList = AF3CD5D72CB0F5120019D456 /* Build configuration list for PBXProject "AudioVisualizer" */;
+			buildConfigurationList = CCCCCCCCCCCCCCCCCCCCCCCC /* Build configuration list for PBXProject "AudioVisualizer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -128,46 +169,53 @@
 				en,
 				Base,
 			);
-			mainGroup = AF3CD5D32CB0F5120019D456;
-			productRefGroup = AF3CD5DD2CB0F5120019D456 /* Products */;
+			mainGroup = C2C2C2C2C2C2C2C2C2C2C2C2;
+			productRefGroup = C5C5C5C5C5C5C5C5C5C5C5C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF3CD5DB2CB0F5120019D456 /* AudioVisualizer */,
+				C7C7C7C7C7C7C7C7C7C7C7C7 /* AudioVisualizer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AF3CD5DA2CB0F5120019D456 /* Resources */ = {
+		CACACACACACACACACACACACA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF3CD5E72CB0F5130019D456 /* Preview Assets.xcassets in Resources */,
-				AF3CD5E42CB0F5130019D456 /* Assets.xcassets in Resources */,
+				AF31AC832CC0C0D0006875C5 /* Preview Assets.xcassets in Resources */,
+				A5A5A5A5A5A5A5A5A5A5A5A5 /* Assets.xcassets in Resources */,
+				AF31AC822CC0C0D0006875C5 /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AF3CD5D82CB0F5120019D456 /* Sources */ = {
+		C9C9C9C9C9C9C9C9C9C9C9C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF3CD5E22CB0F5120019D456 /* ContentView.swift in Sources */,
-				AF3CD5E02CB0F5120019D456 /* AudioVisualizerApp.swift in Sources */,
+				A3A3A3A3A3A3A3A3A3A3A3A3 /* ContentView.swift in Sources */,
+				A1A1A1A1A1A1A1A1A1A1A1A1 /* AudioVisualizerApp.swift in Sources */,
+				A9A9A9A9A9A9A9A9A9A9A9A9 /* AppCoordinator.swift in Sources */,
+				ABABABABABABABABABABABAB /* AppCoordinatorView.swift in Sources */,
+				ADADADADADADADADADADADAD /* FileSelectionView.swift in Sources */,
+				AFAFAFAFAFAFAFAFAFAFAFAF /* ConfigurationView.swift in Sources */,
+				B1B1B1B1B1B1B1B1B1B1B1B1 /* AudioAnalyzer.swift in Sources */,
+				B3B3B3B3B3B3B3B3B3B3B3B3 /* SceneBuilder.swift in Sources */,
+				B5B5B5B5B5B5B5B5B5B5B5B5 /* VisualizationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AF3CD5E92CB0F5130019D456 /* Debug */ = {
+		CDCDCDCDCDCDCDCDCDCDCDCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -197,11 +245,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -215,22 +264,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		AF3CD5EA2CB0F5130019D456 /* Release */ = {
+		CECECECECECECECECECECECE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -260,11 +305,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -272,24 +318,22 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		AF3CD5EC2CB0F5130019D456 /* Debug */ = {
+		CFCFCFCFCFCFCFCFCFCFCFCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AudioVisualizer/AudioVisualizer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioVisualizer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -298,23 +342,25 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellcohen.AudioVisualizer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AudioVisualizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		AF3CD5ED2CB0F5130019D456 /* Release */ = {
+		D0D0D0D0D0D0D0D0D0D0D0D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AudioVisualizer/AudioVisualizer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioVisualizer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -323,9 +369,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellcohen.AudioVisualizer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AudioVisualizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -334,25 +382,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF3CD5D72CB0F5120019D456 /* Build configuration list for PBXProject "AudioVisualizer" */ = {
+		C8C8C8C8C8C8C8C8C8C8C8C8 /* Build configuration list for PBXNativeTarget "AudioVisualizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF3CD5E92CB0F5130019D456 /* Debug */,
-				AF3CD5EA2CB0F5130019D456 /* Release */,
+				CFCFCFCFCFCFCFCFCFCFCFCF /* Debug */,
+				D0D0D0D0D0D0D0D0D0D0D0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF3CD5EB2CB0F5130019D456 /* Build configuration list for PBXNativeTarget "AudioVisualizer" */ = {
+		CCCCCCCCCCCCCCCCCCCCCCCC /* Build configuration list for PBXProject "AudioVisualizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF3CD5EC2CB0F5130019D456 /* Debug */,
-				AF3CD5ED2CB0F5130019D456 /* Release */,
+				CDCDCDCDCDCDCDCDCDCDCDCD /* Debug */,
+				CECECECECECECECECECECECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AF3CD5D42CB0F5120019D456 /* Project object */;
+	rootObject = CBCBCBCBCBCBCBCBCBCBCBCB /* Project object */;
 }
