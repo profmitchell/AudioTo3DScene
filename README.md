@@ -2,6 +2,15 @@
 
 This is a macOS application that visualizes audio files using SwiftUI and SceneKit. The app allows users to select an audio file, configure visualization parameters, and view a 3D representation of the audio data.
 
+
+<img width="1217" alt="Screenshot 2024-10-17 at 1 26 13 PM" src="https://github.com/user-attachments/assets/25d31d71-50c0-4a6b-b351-a46c4751f3b7">
+
+
+<img width="1217" alt="Screenshot 2024-10-17 at 1 24 26 PM" src="https://github.com/user-attachments/assets/493e7a2c-6c3c-4219-a453-9d0e1c40788a">
+
+
+<img width="1217" alt="Screenshot 2024-10-17 at 1 25 23 PM" src="https://github.com/user-attachments/assets/8154d196-4f7f-402f-969f-b1cc300e5409">
+
 ## Features
 
 - File selection for audio input
