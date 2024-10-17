@@ -1,9 +1,10 @@
-
 import SwiftUI
 
 struct ConfigurationView: View {
     @ObservedObject var coordinator: AppCoordinator
     @State private var config: VisualizationConfig
+    @State private var showGradientPicker = false
+    @State private var customGradient = ColorGradient(colors: [.red, .blue])
     
     init(coordinator: AppCoordinator) {
         self.coordinator = coordinator
@@ -21,7 +22,13 @@ struct ConfigurationView: View {
                 
                 Picker("Color Scheme", selection: $config.colorScheme) {
                     ForEach(ColorScheme.allCases, id: \.self) { scheme in
-                        Text(scheme.rawValue.capitalized).tag(scheme)
+                        Text(scheme.name).tag(scheme)
+                    }
+                }
+                
+                if case .custom = config.colorScheme {
+                    Button("Edit Custom Gradient") {
+                        showGradientPicker = true
                     }
                 }
                 
@@ -60,6 +67,50 @@ struct ConfigurationView: View {
                 Button("Generate Visualization") {
                     coordinator.visualizationConfig = config
                     coordinator.generateVisualization()
+                }
+            }
+        }
+        .sheet(isPresented: $showGradientPicker) {
+            GradientPickerView(gradient: $customGradient) {
+                config.colorScheme = .custom(customGradient)
+                coordinator.updateColorScheme(config.colorScheme)
+            }
+        }
+    }
+}
+
+struct GradientPickerView: View {
+    @Binding var gradient: ColorGradient
+    var onDismiss: () -> Void
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                LinearGradient(gradient: Gradient(colors: gradient.colors), startPoint: .leading, endPoint: .trailing)
+                    .frame(height: 50)
+                    .cornerRadius(10)
+                    .padding()
+                
+                List {
+                    ForEach(gradient.colors.indices, id: \.self) { index in
+                        ColorPicker("Color \(index + 1)", selection: $gradient.colors[index])
+                    }
+                    .onDelete { indices in
+                        gradient.colors.remove(atOffsets: indices)
+                    }
+                }
+                
+                Button("Add Color") {
+                    gradient.colors.append(.white)
+                }
+                .padding()
+            }
+            .navigationTitle("Custom Gradient")
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") {
+                        onDismiss()
+                    }
                 }
             }
         }

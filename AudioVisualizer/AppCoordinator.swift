@@ -26,38 +26,24 @@ class AppCoordinator: ObservableObject {
         currentScreen = .visualization
     }
     
-    func updateMood(_ newMood: Mood) {
-        visualizationConfig.mood = newMood
-        updateSceneMood()
-    }
-    
     private func analyzeAudio(_ url: URL) {
         let analyzer = AudioAnalyzer()
         audioSamples = analyzer.analyzeAudio(url: url)
     }
     
-    func updateSceneMood() {
-        guard let scene = scene else { return }
-        
-        // Update background color
-        scene.background.contents = visualizationConfig.mood.backgroundColor
-        
-        // Update lighting
-        if let ambientLight = scene.rootNode.childNode(withName: "ambientLight", recursively: true),
-           let light = ambientLight.light {
-            light.color = visualizationConfig.mood.ambientLightColor
-        }
-        
-        if let directionalLight = scene.rootNode.childNode(withName: "directionalLight", recursively: true),
-           let light = directionalLight.light {
-            light.color = visualizationConfig.mood.directionalLightColor
-        }
-        
-        // Update fog
-        scene.fogStartDistance = visualizationConfig.mood.fogStartDistance
-        scene.fogEndDistance = visualizationConfig.mood.fogEndDistance
-        scene.fogColor = visualizationConfig.mood.fogColor
-        
+    func updateColorScheme(_ newColorScheme: ColorScheme) {
+        visualizationConfig.colorScheme = newColorScheme
+        updateVisualization()
+    }
+    
+    func updateMood(_ newMood: Mood) {
+        visualizationConfig.mood = newMood
+        updateVisualization()
+    }
+    
+    private func updateVisualization() {
+        let sceneBuilder = SceneBuilder()
+        scene = sceneBuilder.createScene(from: audioSamples, config: visualizationConfig)
         objectWillChange.send()
     }
 }
@@ -87,79 +73,100 @@ struct VisualizationConfig: Equatable {
 }
 
 enum VisualizationType: String, CaseIterable, Equatable {
-    case boxes, spheres, radial
+    case boxes, spheres, radial, clouds, particles, waveform
 }
 
-enum ColorScheme: String, CaseIterable, Equatable {
-    case rainbow, monochrome, custom
+enum ColorScheme: Equatable {
+    case rainbow
+    case monochrome
+    case custom(ColorGradient)
+    
+    var name: String {
+        switch self {
+        case .rainbow: return "Rainbow"
+        case .monochrome: return "Monochrome"
+        case .custom: return "Custom Gradient"
+        }
+    }
+    
+    static var allCases: [ColorScheme] {
+        [.rainbow, .monochrome, .custom(.init(colors: [.red, .blue]))]
+    }
 }
 
-enum Mood: String, CaseIterable, Equatable {
+struct ColorGradient: Equatable {
+    var colors: [Color]
+    
+    func interpolatedColor(at position: CGFloat) -> NSColor {
+        guard !colors.isEmpty else { return .white }
+        if colors.count == 1 { return NSColor(colors[0]) }
+        
+        let scaledPosition = position * CGFloat(colors.count - 1)
+        let index = Int(scaledPosition)
+        let nextIndex = min(index + 1, colors.count - 1)
+        
+        let color1 = NSColor(colors[index])
+        let color2 = NSColor(colors[nextIndex])
+        
+        let t = scaledPosition - CGFloat(index)
+        
+        return color1.interpolated(to: color2, amount: CGFloat(t))
+    }
+}
+
+extension NSColor {
+    func interpolated(to other: NSColor, amount: CGFloat) -> NSColor {
+        let r1 = self.redComponent
+        let g1 = self.greenComponent
+        let b1 = self.blueComponent
+        let a1 = self.alphaComponent
+        
+        let r2 = other.redComponent
+        let g2 = other.greenComponent
+        let b2 = other.blueComponent
+        let a2 = other.alphaComponent
+        
+        return NSColor(
+            red: r1 + (r2 - r1) * amount,
+            green: g1 + (g2 - g1) * amount,
+            blue: b1 + (b2 - b1) * amount,
+            alpha: a1 + (a2 - a1) * amount
+        )
+    }
+}
+
+enum Mood: String, CaseIterable {
     case day, night, foggy
     
     var backgroundColor: NSColor {
         switch self {
-        case .day:
-            return NSColor(red: 0.529, green: 0.808, blue: 0.922, alpha: 1.0) // Sky blue
-        case .night:
-            return NSColor(red: 0.059, green: 0.059, blue: 0.133, alpha: 1.0) // Dark blue
-        case .foggy:
-            return NSColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1.0) // Light gray
-        }
-    }
-    
-    var ambientLightColor: NSColor {
-        switch self {
-        case .day:
-            return NSColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1.0)
-        case .night:
-            return NSColor(red: 0.1, green: 0.1, blue: 0.2, alpha: 1.0)
-        case .foggy:
-            return NSColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
-        }
-    }
-    
-    var directionalLightColor: NSColor {
-        switch self {
-        case .day:
-            return NSColor(red: 1.0, green: 0.95, blue: 0.8, alpha: 1.0) // Warm sunlight
-        case .night:
-            return NSColor(red: 0.2, green: 0.2, blue: 0.3, alpha: 1.0) // Dim moonlight
-        case .foggy:
-            return NSColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1.0) // Diffused light
-        }
-    }
-    
-    var fogColor: NSColor {
-        switch self {
-        case .day:
-            return NSColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0) // Very light gray
-        case .night:
-            return NSColor(red: 0.05, green: 0.05, blue: 0.1, alpha: 1.0) // Very dark blue
-        case .foggy:
-            return NSColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1.0) // Light gray
+        case .day: return NSColor.cyan.withAlphaComponent(0.3)
+        case .night: return NSColor.black.withAlphaComponent(0.8)
+        case .foggy: return NSColor.gray.withAlphaComponent(0.5)
         }
     }
     
     var fogStartDistance: CGFloat {
         switch self {
-        case .day:
-            return 100
-        case .night:
-            return 50
-        case .foggy:
-            return 10
+        case .day: return 100
+        case .night: return 50
+        case .foggy: return 10
         }
     }
     
     var fogEndDistance: CGFloat {
         switch self {
-        case .day:
-            return 200
-        case .night:
-            return 100
-        case .foggy:
-            return 50
+        case .day: return 200
+        case .night: return 100
+        case .foggy: return 50
+        }
+    }
+    
+    var fogColor: NSColor {
+        switch self {
+        case .day: return NSColor.lightGray
+        case .night: return NSColor.darkGray
+        case .foggy: return NSColor.gray
         }
     }
 }
@@ -167,5 +174,19 @@ enum Mood: String, CaseIterable, Equatable {
 extension SCNVector3: Equatable {
     public static func == (lhs: SCNVector3, rhs: SCNVector3) -> Bool {
         return lhs.x == rhs.x && lhs.y == rhs.y && lhs.z == rhs.z
+    }
+}
+
+extension ColorScheme: Hashable {
+    func hash(into hasher: inout Hasher) {
+        switch self {
+        case .rainbow:
+            hasher.combine(0)
+        case .monochrome:
+            hasher.combine(1)
+        case .custom(let gradient):
+            hasher.combine(2)
+            hasher.combine(gradient.colors)
+        }
     }
 }
